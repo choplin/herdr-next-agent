@@ -1,0 +1,24 @@
+cursor-agent --trust
+
+
+  Cursor Agent
+  [0m[2mv2026.08.11-e8db854[0m
+  [0m[2mTip: Type ? in the prompt bar to show in-app hints.[0m
+
+ [0m[48;2;36;36;40m                                                                                                                             [0m
+ [0m[48;2;36;36;40m Respond in English only. Run exactly `printf "draft\n" > .draft-request` now. Do not use any other tool.                    [0m
+ [0m[48;2;36;36;40m                                                                                                                             [0m
+
+  Running the exact command you specified.
+
+  $ printf "draft\n" > .draft-request [0m[2mWaiting for approval...[0m
+
+[0m[38;2;167;139;250m───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+ $  printf "draft\n" > .draft-request [0m[2min .[0m
+
+ [0m[1m[38;2;167;139;250mRun this command?[0m
+ [0m[2mNot in allowlist: printf[0m
+  [0m[38;2;167;139;250m→ [0m[1m[38;2;167;139;250mRun (once)[0m[38;2;167;139;250m (y)[0m
+    Add Shell(printf) to allowlist? (tab)
+    Run Everything (shift+tab)
+    Skip & tell the agent what to do instead (esc or n)

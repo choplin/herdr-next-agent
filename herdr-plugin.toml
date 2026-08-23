@@ -1,0 +1,21 @@
+id = "choplin.next-agent"
+name = "Next Agent"
+version = "0.1.0"
+min_herdr_version = "0.8.2"
+description = "Move between Agents in configured semantic states"
+platforms = ["linux", "macos"]
+
+[[build]]
+command = ["go", "build", "-trimpath", "-o", "herdr-next-agent", "./cmd/herdr-next-agent"]
+
+[[actions]]
+id = "next"
+title = "Focus next matching Agent"
+contexts = ["pane", "workspace"]
+command = ["./herdr-next-agent", "next"]
+
+[[actions]]
+id = "previous"
+title = "Focus previous matching Agent"
+contexts = ["pane", "workspace"]
+command = ["./herdr-next-agent", "previous"]
