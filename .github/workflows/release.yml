@@ -17,8 +17,15 @@ jobs:
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: >-
-          gh release create "$GITHUB_REF_NAME"
-          --verify-tag
-          --title "$GITHUB_REF_NAME"
-          --notes-file CHANGELOG.md
+        run: |
+          release_notes="$RUNNER_TEMP/release-notes.md"
+          awk -v version="$GITHUB_REF_NAME" '
+            index($0, "## [" version "]") == 1 { found = 1; next }
+            found && /^## \[/ { exit }
+            found { print }
+          ' CHANGELOG.md > "$release_notes"
+          test -s "$release_notes"
+          gh release create "$GITHUB_REF_NAME" \\
+            --verify-tag \\
+            --title "$GITHUB_REF_NAME" \\
+            --notes-file "$release_notes"
