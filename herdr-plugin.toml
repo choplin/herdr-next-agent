@@ -1,6 +1,6 @@
 id = "choplin.next-agent"
 name = "Next Agent"
-version = "0.1.0"
+version = "0.1.1"
 min_herdr_version = "0.8.2"
 description = "Move between Agents in configured semantic states"
 platforms = ["linux", "macos"]
