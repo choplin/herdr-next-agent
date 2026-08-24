@@ -12,7 +12,7 @@ By default, the plugin moves through `blocked` Agents in the order shown in Herd
 Installation requires Herdr 0.8.2 or newer and Go 1.22 or newer:
 
 ```sh
-herdr plugin install choplin/herdr-plugins/herdr-next-agent
+herdr plugin install choplin/herdr-next-agent
 ```
 
 The manifest builds a native binary during installation, so the plugin has no runtime language
