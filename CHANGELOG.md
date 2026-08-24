@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - License the project under the MIT License.
+- Create a GitHub Release from the changelog when a tag is pushed.
 
 ## [0.1.0] - 2026-08-24
 
